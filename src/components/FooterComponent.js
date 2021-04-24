@@ -8,13 +8,14 @@ class FooterComponent extends Component {
   }
   render() {
     return (
-      <div>
+      <>
         <footer className="footer">
           <samp className="taxt-muted">
-            All Rights Reserved 2020 @javaguides
+            Web Application Study and Development with AngularJS and Spring Boot
+            By chanikan Potjamanpong
           </samp>
         </footer>
-      </div>
+      </>
     );
   }
 }

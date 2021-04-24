@@ -10,17 +10,11 @@ class UpdateSbshop_userComponent extends Component {
       user_id: this.props.match.params.user_id,
       user_firstname: "",
       user_lastname: "",
-      user_username: "",
-      user_password: "",
-      user_status_id: "",
       user_address: "",
       user_phone_number: "",
     };
     this.changeFiratNameHandler = this.changeFiratNameHandler.bind(this);
     this.changeLastnameHandler = this.changeLastnameHandler.bind(this);
-    this.changeusernameHandler = this.changeusernameHandler.bind(this);
-    this.changepasswordHandler = this.changepasswordHandler.bind(this);
-    this.changestatus_idHandler = this.changestatus_idHandler.bind(this);
     this.changeaddressHandler = this.changeaddressHandler.bind(this);
     this.changephone_numberHandler = this.changephone_numberHandler.bind(this);
     this.updateSbshop_user = this.updateSbshop_user.bind(this);
@@ -32,9 +26,6 @@ class UpdateSbshop_userComponent extends Component {
       this.setState({
         user_firstname: sbshop_user.user_firstname,
         user_lastname: sbshop_user.user_lastname,
-        user_username: sbshop_user.user_username,
-        user_password: sbshop_user.user_password,
-        user_status_id: sbshop_user.user_status_id,
         user_address: sbshop_user.user_address,
         user_phone_number: sbshop_user.user_phone_number,
       });
@@ -46,9 +37,6 @@ class UpdateSbshop_userComponent extends Component {
     let sbshop_user = {
       user_firstname: this.state.user_firstname,
       user_lastname: this.state.user_lastname,
-      user_username: this.state.user_username,
-      user_password: this.state.user_password,
-      user_status_id: this.state.user_status_id,
       user_address: this.state.user_address,
       user_phone_number: this.state.user_phone_number,
     };
@@ -74,15 +62,6 @@ class UpdateSbshop_userComponent extends Component {
   changeLastnameHandler = (event) => {
     this.setState({ user_lastname: event.target.value });
   };
-  changeusernameHandler = (event) => {
-    this.setState({ user_username: event.target.value });
-  };
-  changepasswordHandler = (event) => {
-    this.setState({ user_password: event.target.value });
-  };
-  changestatus_idHandler = (event) => {
-    this.setState({ user_status_id: event.target.value });
-  };
 
   changeaddressHandler = (event) => {
     this.setState({ user_address: event.target.value });
@@ -97,76 +76,44 @@ class UpdateSbshop_userComponent extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <div className="container">
+          <br></br>
           <div className="row">
             <div className="card col-md-6 offset-md-3 offset-md-3">
               <h3 className="text-center">Updast User</h3>
               <div className="card-body">
                 <form>
                   <div className="form-group">
-                    <div className="row">
-                      <div className="col-6">
-                        <label>First Name</label>
-                        <input
-                          placeholder="First Name"
-                          name="user_firstname"
-                          className="form-control"
-                          value={this.state.user_firstname}
-                          onChange={this.changeFiratNameHandler}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <label>Last Name</label>
-                        <input
-                          placeholder="Last Name"
-                          name="user_lastname"
-                          className="form-control"
-                          value={this.state.user_lastname}
-                          onChange={this.changeLastnameHandler}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <label>User Name</label>
-                        <input
-                          placeholder="User Name"
-                          name="user_username"
-                          className="form-control"
-                          value={this.user_username}
-                          onChange={this.changeusernameHandler}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <label>Password</label>
-                        <input
-                          placeholder="Password"
-                          name="user_password"
-                          className="form-control"
-                          value={this.state.user_password}
-                          onChange={this.changepasswordHandler}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <label>Status ID</label>
-                        <input
-                          placeholder="Status ID"
-                          name="user_status_id"
-                          className="form-control"
-                          value={this.state.user_status_id}
-                          onChange={this.changestatus_idHandler}
-                        />
-                      </div>
-                      <div className="col-6">
-                        <label>Phone Number</label>
-                        <input
-                          placeholder="Phone Number"
-                          name="user_phone_number"
-                          className="form-control"
-                          value={this.state.user_phone_number}
-                          onChange={this.changephone_numberHandler}
-                        />
-                      </div>
-                    </div>
+                    <label>First Name</label>
+                    <input
+                      placeholder="First Name"
+                      name="user_firstname"
+                      className="form-control"
+                      value={this.state.user_firstname}
+                      onChange={this.changeFiratNameHandler}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Last Name</label>
+                    <input
+                      placeholder="Last Name"
+                      name="user_lastname"
+                      className="form-control"
+                      value={this.state.user_lastname}
+                      onChange={this.changeLastnameHandler}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Phone Number</label>
+                    <input
+                      placeholder="Phone Number"
+                      name="user_phone_number"
+                      className="form-control"
+                      value={this.state.user_phone_number}
+                      onChange={this.changephone_numberHandler}
+                    />
                   </div>
 
                   <div className="form-group">
@@ -184,8 +131,20 @@ class UpdateSbshop_userComponent extends Component {
                     className="btn btn-success"
                     onClick={this.updateSbshop_user}
                   >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{ marginRight: 10 }}
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-trash-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"></path>
+                    </svg>
                     Save
                   </button>
+
                   <button
                     className="btn btn-danger"
                     onClick={this.cancel.bind(this)}
@@ -198,7 +157,7 @@ class UpdateSbshop_userComponent extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

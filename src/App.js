@@ -9,10 +9,10 @@ import UpdateSbshop_userComponent from "./components/UpdateSbshop_userComponent"
 import ViewSbshop_userComponent from "./components/ViewSbshop_userComponent";
 function App() {
   return (
-    <div>
+    <>
       <Router>
         <HeaderComponent />
-        <div className="container">
+        <div className="container2">
           <Switch>
             <Route
               path="/sbshop_user"
@@ -35,7 +35,7 @@ function App() {
         </div>
         <FooterComponent />
       </Router>
-    </div>
+    </>
   );
 }
 

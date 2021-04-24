@@ -21,11 +21,10 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #f6f8f8;
 }
 
 @keyframes App-logo-spin {
@@ -36,6 +35,9 @@
     transform: rotate(360deg);
   }
 }
+/* .container {
+  background-color: blue;
+} */
 
 .footer {
   position: absolute;
@@ -45,4 +47,7 @@
   background-color: black;
   text-align: center;
   color: aliceblue;
+}
+.table {
+  text-align: center;
 }

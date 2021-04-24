@@ -8,17 +8,17 @@ class HeaderComponent extends Component {
   }
   render() {
     return (
-      <div>
+      <>
         <header>
           <nav className="navber navber-expand-md navber-dark bg-dark">
             <div>
-              <a href="http://javaguides.net" className="navbar-brand">
-                sbshop_user Management App
+              <a href="http://localhost:3000/" className="navbar-brand">
+                Phone Book
               </a>
             </div>
           </nav>
         </header>
-      </div>
+      </>
     );
   }
 }

@@ -9,9 +9,6 @@ class Sbshop_userService {
   createSbshop_user(sbshop_user) {
     return axios.post(USER_API_BASE_URL, sbshop_user);
   }
-  testt(sbshop_user) {
-    console.log(JSON.stringify(sbshop_user));
-  }
 
   getSbshop_userById(sbshop_userId) {
     return axios.get(USER_API_BASE_URL + "/" + sbshop_userId);
